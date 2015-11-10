@@ -56,9 +56,7 @@ module.exports = function(grunt) {
         if (options.fileExtension) {
           names[names.length - 1] = names[names.length - 1].replace('.' + options.fileExtension, '');
         }
-        var template = dot.template(grunt.file.read(filepath));
-        assign(templates, names, template);
-        return templates;
+        return dot.template(grunt.file.read(filepath));
       }, {});
 
       if (options.root && src[options.root]) {
